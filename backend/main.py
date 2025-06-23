@@ -30,6 +30,7 @@ class WeatherResponse(BaseModel):
     id: str
 
 
+# Get the API key for the WatherStack API
 load_dotenv()
 WEATHERSTACK_API_KEY = os.getenv("WEATHERSTACK_API_KEY")
 WEATHERSTACK_URL = "http://api.weatherstack.com/current"
@@ -43,6 +44,7 @@ async def create_weather_request(request: WeatherRequest):
         "query": request.location
     }
 
+    # Valiu
     async with httpx.AsyncClient() as client:
         response = await client.get(WEATHERSTACK_URL, params=params)
         if response.status_code != 200:
