@@ -1,4 +1,5 @@
 import { WeatherForm } from "@/components/weather-form";
+import { WeatherLookup } from "@/components/weather-lookup";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
           </div>
 
           {/* Data Lookup Section Placeholder */}
-          <div className="flex flex-col items-center justify-start">
+          {/* <div className="flex flex-col items-center justify-start">
             <h2 className="text-2xl font-semibold mb-4">Lookup Weather Data</h2>
             <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-8">
               <div className="text-muted-foreground">
@@ -39,6 +40,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div> */}
+          <div className="flex flex-col items-center justify-start">
+            <h2 className="text-2xl font-semibold mb-4">Lookup Weather Data</h2>
+            <WeatherLookup />
           </div>
         </div>
       </div>
